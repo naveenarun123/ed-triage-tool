@@ -229,6 +229,13 @@ footer{max-width:1200px;margin:0 auto;padding:6px 22px 40px;color:#8595a9;font-s
       </div>
     </div>
 
+    <!-- Cavernous note: replaces Section 3 for cavernous-segment lesions -->
+    <div id="cavnote" class="section hidden">
+      <div class="shead"><span class="num"><span>3</span></span>
+        <div class="stext"><div class="title">Imaging details do not change the plan here</div>
+          <div class="why">For a cavernous-segment lesion, size and shape do not affect the disposition &mdash; this segment lies outside the dura, so there is no risk of a subarachnoid bleed. The plan is set entirely by the cavernous-sinus symptoms question in Step 2.</div></div></div>
+    </div>
+
     <!-- SECTION 4 -->
     <div class="section" id="sec4">
       <div class="shead"><span class="num"><span>4</span></span>
@@ -455,6 +462,7 @@ function syncUI(){
   var loc=q('input[name=location]:checked');
   q('#cavsx').classList.toggle('hidden',!(loc&&loc.value==='cavernous'));
   q('#lesionblock').classList.toggle('hidden',!!(loc&&loc.value==='cavernous'));
+  q('#cavnote').classList.toggle('hidden',!(loc&&loc.value==='cavernous'));
   var rd=q('input[name=read]:checked');
   q('#allcrit').classList.toggle('hidden',!(rd&&rd.value==='classic_infundibulum'));
   // progress + checkmarks
@@ -529,7 +537,7 @@ function run(){
 }
 function resetForm(){
   qa('input').forEach(function(i){if(i.type==='checkbox'||i.type==='radio')i.checked=false;else i.value='';});
-  q('#lpwrap').classList.add('hidden');q('#cavsx').classList.add('hidden');q('#allcrit').classList.add('hidden');q('#lesionblock').classList.remove('hidden');
+  q('#lpwrap').classList.add('hidden');q('#cavsx').classList.add('hidden');q('#allcrit').classList.add('hidden');q('#lesionblock').classList.remove('hidden');q('#cavnote').classList.add('hidden');
   q('#out').innerHTML='<div class="placeholder"><div class="pic">&#129658;</div><div>Answer the steps on the left, then tap <strong>Get recommendation</strong>.</div></div>';
   q('#printrow').style.display='none';
   syncUI();
