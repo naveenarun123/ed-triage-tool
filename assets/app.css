@@ -55,7 +55,7 @@
   --tap:44px;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) and (max-width:0px){
   :root{
     --paper:#12161d;
     --ground:#0a0d13;
@@ -109,7 +109,7 @@ em{font-style:normal;text-decoration:underline;text-underline-offset:3px}
 :where(a,button,input,[tabindex]):focus-visible{
   outline:2.5px solid var(--ink);outline-offset:2px;
 }
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) and (max-width:0px){
   :where(a,button,input,[tabindex]):focus-visible{outline-color:#8ab4ff}
 }
 
@@ -236,7 +236,7 @@ em{font-style:normal;text-decoration:underline;text-underline-offset:3px}
 .tier.is-only .tier__state{
   background:var(--c);color:var(--paper);border-top-color:var(--c);font-weight:600;
 }
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) and (max-width:0px){
   .tier.is-only .tier__state{color:#0a0d13}
 }
 
@@ -412,7 +412,7 @@ input[aria-invalid=true]{border-color:var(--t1);border-width:2px}
 .verdict__head[data-tier=t3]{background:var(--t3)}
 .verdict__head[data-tier=t4]{background:var(--t4)}
 .verdict__head[data-tier=t5]{background:var(--t5)}
-@media (prefers-color-scheme: dark){ .verdict__head{color:#0a0d13} }
+@media (prefers-color-scheme: dark) and (max-width:0px){ .verdict__head{color:#0a0d13} }
 .verdict__kicker{
   font-family:var(--mono);font-size:10.5px;font-weight:500;
   letter-spacing:.2em;text-transform:uppercase;opacity:.85;
