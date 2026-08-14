@@ -32,6 +32,20 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
     }
+  ],
+  "id": "/ed-triage-tool/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": [
+    "medical",
+    "health",
+    "productivity"
   ]
 }
