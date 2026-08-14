@@ -11,6 +11,12 @@
 <meta name="robots" content="noindex"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141922'/%3E%3Crect x='4' y='7' width='3' height='18' fill='%23d92d20'/%3E%3Crect x='9' y='7' width='3' height='18' fill='%23dc6803'/%3E%3Crect x='14' y='7' width='3' height='18' fill='%23ca8504'/%3E%3Crect x='19' y='7' width='3' height='18' fill='%23079455'/%3E%3Crect x='24' y='7' width='3' height='18' fill='%232970d6'/%3E%3C/svg%3E"/>
 <link rel="stylesheet" href="assets/app.css"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="ED Triage"/>
+<meta name="mobile-web-app-capable" content="yes"/>
 </head>
 <body>
 
@@ -353,5 +359,12 @@
 <section class="printdoc" id="printDoc" aria-hidden="true"></section>
 
 <script src="assets/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>
